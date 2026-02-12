@@ -1,56 +1,120 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AXRAD — Hardware Supplier</title>
-  <meta name="description" content="AXRAD supplies hardware for defense and industrial programs." />
-  <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; color: #111; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 28px 18px; }
-    header { border-bottom: 1px solid #ddd; }
-    h1 { margin: 0; font-size: 22px; letter-spacing: .5px; }
-    h2 { margin: 18px 0 8px; font-size: 28px; }
-    p { margin: 0 0 10px; color: #444; line-height: 1.45; }
-    .pill { display:inline-block; border:1px solid #ddd; padding:8px 10px; border-radius:999px; margin: 6px 10px 0 0; font-size: 13px; }
-    a { color:#0b57d0; text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .btn { display:inline-block; background:#111; color:#fff; padding:10px 12px; border-radius:10px; font-size: 13px; margin-right: 10px; }
-    .btn.secondary { background:#fff; color:#111; border:1px solid #ddd; }
-    footer { border-top: 1px solid #ddd; margin-top: 18px; padding-top: 14px; color:#666; font-size: 13px; }
-    .notice { font-size: 12px; color: #666; margin-top: 10px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXRAD | Precision VLF Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap');
+        
+        body {
+            background-color: #0a192f;
+            color: #e6f1ff;
+            font-family: 'JetBrains+Mono', monospace;
+            background-image: radial-gradient(#112240 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            position: relative;
+            display: inline-block;
+        }
+
+        .pulse-ring {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10b981;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: pulse-ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes pulse-ping {
+            75%, 100% {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        .spec-border {
+            border: 1px solid #233554;
+            transition: all 0.3s ease;
+        }
+
+        .spec-border:hover {
+            border-color: #10b981;
+            background: #1a2c4a;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <div class="wrap">
-      <h1>AXRAD</h1>
-      <h2>Hardware supply for defense and industrial programs</h2>
-      <p>AXRAD provides sourcing and supply of hardware components with a focus on traceability, responsiveness, and clear documentation.</p>
+<body class="min-h-screen flex flex-col justify-between p-8 md:p-16">
+    <header class="flex justify-between items-start">
+        <div>
+            <h1 class="text-3xl font-bold tracking-[0.2em] text-white">AXRAD</h1>
+            <div class="flex items-center gap-3 mt-2">
+                <div class="pulse-dot">
+                    <div class="pulse-ring"></div>
+                </div>
+                <p class="text-xs text-slate-400 uppercase tracking-widest">Quantum & Classical Sensor Systems</p>
+            </div>
+        </div>
+    </header>
 
-      <div>
-        <span class="pill">Location: YOUR CITY, STATE</span>
-        <span class="pill">Phone: (XXX) XXX-XXXX</span>
-        <span class="pill">Email: <a href="mailto:sales@axrad.com">sales@axrad.com</a></span>
-      </div>
+    <main class="max-w-4xl">
+        <div class="mb-12">
+            <h2 class="text-4xl md:text-6xl font-light mb-6 leading-tight">
+                TriVLF<br>
+                <span class="text-emerald-400 font-bold">Ultra-Low-Noise</span><br>
+                Receivers.
+            </h2>
+            <p class="text-slate-400 max-w-xl leading-relaxed">
+                Sub-femtotesla sensitivity in a compact, triaxial form factor. Engineered for strategic, tactical, and autonomous assets requiring resilient communication in contested environments.
+            </p>
+        </div>
 
-      <div style="margin-top:12px;">
-        <a class="btn" href="assets/datasheet.pdf" target="_blank" rel="noopener">Datasheet (PDF)</a>
-        <a class="btn secondary" href="assets/price-list.pdf" target="_blank" rel="noopener">Price List (PDF)</a>
-      </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+            <div class="spec-border p-6">
+                <p class="text-[10px] uppercase text-emerald-400 mb-2">Sensitivity</p>
+                <p class="text-2xl font-bold font-sans">&lt; 0.2 fT/√Hz</p>
+                <p class="text-[10px] text-slate-500 mt-1">@ 30-100 kHz band</p>
+            </div>
+            <div class="spec-border p-6">
+                <p class="text-[10px] uppercase text-emerald-400 mb-2">Bandwidth</p>
+                <p class="text-2xl font-bold font-sans">10 Hz – 100 kHz</p>
+                <p class="text-[10px] text-slate-500 mt-1">Full-spectrum VLF</p>
+            </div>
+            <div class="spec-border p-6">
+                <p class="text-[10px] uppercase text-emerald-400 mb-2">Form Factor</p>
+                <p class="text-2xl font-bold font-sans">3.2 Liters</p>
+                <p class="text-[10px] text-slate-500 mt-1">Compact Triaxial Sensor Head</p>
+            </div>
+        </div>
 
-      <div class="notice">
-        Do not send controlled technical data (e.g., ITAR/EAR/CUI) via this website or standard email. Request a secure transfer method if needed.
-      </div>
-    </div>
-  </header>
+        <a href="mailto:sales@axrad.com" class="inline-block border border-emerald-400 text-emerald-400 px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-emerald-400 hover:text-[#0a192f] transition-all">
+            Request Datasheet
+        </a>
+    </main>
 
-  <div class="wrap">
-    <p><strong>Contact:</strong> <a href="mailto:sales@axrad.com">sales@axrad.com</a> • (XXX) XXX-XXXX</p>
-    <p><strong>Mailing Address:</strong> STREET ADDRESS, CITY, STATE ZIP, USA</p>
-    <footer>© <span id="y"></span> AXRAD</footer>
-  </div>
-
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+    <footer class="pt-16 border-t border-[#233554] flex flex-col md:flex-row justify-between text-[11px] text-slate-500 gap-8">
+        <div>
+            <p class="font-bold text-slate-300 mb-2 uppercase">Mailing Address</p>
+            <p>AXRAD LLC</p>
+            <p>160 Alewife Brook Pkwy #1405</p>
+            <p>Cambridge, MA 02138 | United States</p>
+        </div>
+        <div class="md:text-right">
+            <p class="font-bold text-slate-300 mb-2 uppercase">Communications</p>
+            <p>Email: sales@axrad.com</p>
+            <p>Phone: (617) 682-0999</p>
+            <p class="mt-4">© 2026 AXRAD. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
