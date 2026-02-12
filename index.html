@@ -33,29 +33,6 @@
             display: inline-block;
         }
 
-        .logo-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, #10b981 0%, transparent 70%);
-            filter: blur(8px);
-            animation: logo-breathe 4s ease-in-out infinite;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        @keyframes logo-breathe {
-            0%, 100% {
-                opacity: 0.2;
-            }
-            50% {
-                opacity: 0.7;
-            }
-        }
-
         .spec-border {
             border: 1px solid #233554;
             transition: all 0.3s ease;
