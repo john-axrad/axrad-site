@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AXRAD | Precision VLF Systems</title>
+    <title>AXRAD | Precision Quantum & Classical Sensor Systems</title>
+    <link rel="icon" type="image/png" href="AXRAD_logo_white_transparent.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap');
@@ -14,6 +15,17 @@
             font-family: 'JetBrains+Mono', monospace;
             background-image: radial-gradient(#112240 1px, transparent 1px);
             background-size: 40px 40px;
+            overflow-x: hidden;
+        }
+
+        /* Strategic Silence - Hide scrollbars */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
 
         .pulse-dot {
@@ -57,12 +69,12 @@
 <body class="min-h-screen flex flex-col justify-between p-8 md:p-16">
     <header class="flex justify-between items-start">
         <div>
-            <h1 class="text-3xl font-bold tracking-[0.2em] text-white">AXRAD</h1>
+            <img src="AXRAD_logo_white_transparent.png" alt="AXRAD" style="height: 40px;" />
             <div class="flex items-center gap-3 mt-2">
                 <div class="pulse-dot">
                     <div class="pulse-ring"></div>
                 </div>
-                <p class="text-xs text-slate-400 uppercase tracking-widest">Quantum & Classical Sensor Systems</p>
+                <p class="text-xs text-slate-400 uppercase tracking-widest">Precision Quantum & Classical Sensor Systems</p>
             </div>
         </div>
     </header>
